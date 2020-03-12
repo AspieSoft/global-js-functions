@@ -3,7 +3,7 @@
 This adds some extra global functions to node.js and javascript.
 The same file will run both server side and client side.
 
-###Setup
+### Setup
 
 ```js
 // express
@@ -65,7 +65,7 @@ if('/cdn/functions.js' === url.parse(req.url).pathname){
 <!-- all above js examples return the same static url -->
 ```
 
-###Usage
+### Usage
 
 ```js
 forEach(obj || arr || str, function(value, index, array){

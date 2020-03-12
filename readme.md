@@ -1,4 +1,4 @@
-##Global JS Functions
+## Global JS Functions
 
 This adds some extra global functions to node.js and javascript.
 The same file will run both server side and client side.

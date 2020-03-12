@@ -1,0 +1,21 @@
+{
+  "name": "@AspieSoft/global-js-functions",
+  "version": "0.1.4",
+  "description": "Some additional functions for node.js and javascript",
+  "author": "AspieSoft",
+  "repository": {
+    "url": "git://github.com/aspiesoft/global-js-functions"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "functions",
+    "global",
+    "node.js",
+    "javascript",
+    "js"
+  ],
+  "optionalDependencies": {
+    "express": "^4.17.1"
+  }
+}

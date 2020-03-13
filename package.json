@@ -1,12 +1,13 @@
 {
   "name": "global-js-functions",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Some additional functions for node.js and javascript",
+  "license": "MIT",
   "author": "AspieSoft",
   "repository": {
-    "url": "git://github.com/aspiesoft/global-js-functions"
+    "type": "git",
+    "url": "git://github.com/aspiesoft/global-js-functions.git"
   },
-  "license": "MIT",
   "main": "index.js",
   "keywords": [
     "functions",

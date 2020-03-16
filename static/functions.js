@@ -131,12 +131,18 @@ Function.clone = function(func){
 
 function toNumber(str){
     if(typeof str === 'number'){return str;}
-    return Number(str.replace(/[^0-9.]/g, '').split('.', 2).join('.'));
+    str = str.toString().replace(/[^0-9.]/g, '').split('.', 2).join('.').trim();
+    if(!str || str === '' || str === '.'){return NaN;}
+    if(str.startsWith('.')){str = '0'+str;}
+    if(str.endsWith('.')){str = str.substring(0, str.lastIndexOf('.'));}
+    return Number(str);
 }
 
 function toInteger(str){
     if(typeof str === 'number'){return Math.floor(str);}
-    return Number(str.replace(/[^0-9.]/g, '').split('.', 1)[0]);
+    str = str.toString().replace(/[^0-9.]/g, '').split('.', 1)[0].trim();
+    if(!str || str === ''){return NaN;}
+    return Number(str);
 }
 
 function toTimeMillis(str){
@@ -186,6 +192,16 @@ RegExp.escape = function(str){
 String.reverse = function(str, separator = ''){return str.split(separator).reverse().join(separator);};
 String.replaceAll = function(str, search, replace){search = RegExp.escape(search); return str.replace(new RegExp('('+RegExp.escape(search)+')', 'g'), replace.toString());};
 String.replaceLast = function(str, search, replace){search = RegExp.escape(search); return str.replace(new RegExp('('+search+')(?!.*'+search+')'), replace.toString());};
+
+JSON.normalizeStr = function(str){return str.replace(/"?([\w_\- ]+)"?\s*?:\s*?"?(.*?)"?\s*?([,}\]])/gsi, (str, index, item, end) => {
+    index = index.replace(/"/gsi, '').trim(); item = item.replace(/"/gsi, '').trim();
+    if(!index || !item || index === '' || item === ''){return end;}
+    index = '"'+index+'"';
+    let itemN = toNumber(item);
+    if((itemN || itemN === 0) && itemN !== ''){item = itemN;}
+    else if(item !== 'true' && item !== 'false'){item = '"'+item+'"';}
+    return index+':'+item+end;
+}).replace(/,\s*?([}\]])/gsi, '$1');};
 
 Math.sum = function(start, end, callback){
     let answer = 0;

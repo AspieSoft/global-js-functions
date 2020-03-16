@@ -1,11 +1,8 @@
 ## Global JS Functions
 
 ![npm](https://img.shields.io/npm/v/global-js-functions)
-
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/global-js-functions)
-
 ![NPM](https://img.shields.io/npm/l/global-js-functions)
-
 ![npm](https://img.shields.io/npm/dw/global-js-functions)
 
 This adds some extra global functions to node.js and javascript.
@@ -173,6 +170,9 @@ String.replaceLast(str, search, replace);
 
 // reverses the characters in a string, or by a separator
 String.reverse(str, separator);
+
+// fixes json string to proper format
+JSON.normalizeStr(`{test1: "1", test2: "test 2",}`); // output: {"test1":1,"test2":"test 2"}
 
 // the math sum operator. Basically a for loop
 // answer += callback(n);

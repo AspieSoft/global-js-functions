@@ -2,8 +2,15 @@
 
 ![npm](https://img.shields.io/npm/v/global-js-functions)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/global-js-functions)
+![GitHub top language](https://img.shields.io/github/languages/top/aspiesoft/global-js-functions)
 ![NPM](https://img.shields.io/npm/l/global-js-functions)
+
 ![npm](https://img.shields.io/npm/dw/global-js-functions)
+![npm](https://img.shields.io/npm/dm/global-js-functions)
+![GitHub last commit](https://img.shields.io/github/last-commit/aspiesoft/global-js-functions)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aspiesoft/global-js-functions)
+
+[![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](http://buymeacoffee.aspiesoft.com/)
 
 This adds some extra global functions to node.js and javascript.
 The same file will run both server side and client side.

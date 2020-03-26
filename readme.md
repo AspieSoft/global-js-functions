@@ -10,7 +10,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/aspiesoft/global-js-functions)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aspiesoft/global-js-functions)
 
-[![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](http://buymeacoffee.aspiesoft.com/)
+[![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](https://buymeacoffee.aspiesoft.com/)
 
 This adds some extra global functions to node.js and javascript.
 The same file will run both server side and client side.

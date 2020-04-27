@@ -43,4 +43,8 @@ function addStaticPath(staticPath, app){
     };
 }
 
-module.exports = addStaticPath;
+module.exports = (function(){
+    let exports = addStaticPath;
+    exports.filePath = path.join(__dirname, 'static/functions.js');
+    return exports;
+})();

@@ -8,11 +8,10 @@
 ![npm](https://img.shields.io/npm/dw/global-js-functions)
 ![npm](https://img.shields.io/npm/dm/global-js-functions)
 ![GitHub last commit](https://img.shields.io/github/last-commit/aspiesoft/global-js-functions)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aspiesoft/global-js-functions)
 
 [![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](https://buymeacoffee.aspiesoft.com/)
 
-This adds some extra global functions to node.js and javascript.
+This module adds some extra global functions to node.js and javascript.
 The same file will run both server side and client side.
 
 ### Installation
@@ -33,6 +32,10 @@ const app = express();
 
 // add express static file
 jsFunctions('/cdn/functions.js', app); // returns true on success
+
+
+// another way to add the functions to client side
+app.use('/cdn/functions.js', express.static(jsFunctions.filePath));
 
 
 // basic http

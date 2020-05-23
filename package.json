@@ -1,6 +1,6 @@
 {
   "name": "global-js-functions",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "Some additional functions for node.js and javascript",
   "license": "MIT",
   "author": "AspieSoft",
@@ -19,5 +19,8 @@
   ],
   "optionalPeerDependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "miniforge-js": "^0.2.5"
   }
 }

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
-require('./static/functions');
+require('./static/functions.min');
 
 function addStaticPath(staticPath, app){
     if(!staticPath || typeof staticPath !== 'string'){
@@ -11,7 +11,7 @@ function addStaticPath(staticPath, app){
             const express = require('express');
             return express.static(path.join(__dirname, 'static'), {index: ['functions.js'], redirect: true});
         }catch(e){
-            let staticFile = fs.readFileSync(path.join(__dirname, 'static/functions.js')).toString();
+            let staticFile = fs.readFileSync(path.join(__dirname, 'static/functions.min.js')).toString();
             if(!staticFile || staticFile.trim() === ''){return Function.toFunction(false);}
             return function(){return staticFile;};
         }
@@ -27,7 +27,7 @@ function addStaticPath(staticPath, app){
             return true;
         }catch(e){return false;}
     }
-    let staticFile = fs.readFileSync(path.join(__dirname, 'static/functions.js')).toString();
+    let staticFile = fs.readFileSync(path.join(__dirname, 'static/functions.min.js')).toString();
     if(!staticFile || staticFile.trim() === ''){return Function.toFunction(false);}
     return function(req, res){
         let urlPath = url.parse(req.url).pathname;
@@ -45,6 +45,6 @@ function addStaticPath(staticPath, app){
 
 module.exports = (function(){
     let exports = addStaticPath;
-    exports.filePath = path.join(__dirname, 'static/functions.js');
+    exports.filePath = path.join(__dirname, 'static/functions.min.js');
     return exports;
 })();

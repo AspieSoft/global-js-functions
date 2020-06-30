@@ -8,7 +8,7 @@
 ![npm](https://img.shields.io/npm/dw/global-js-functions)
 ![npm](https://img.shields.io/npm/dm/global-js-functions)
 
-[![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](https://buymeacoffee.aspiesoft.com/)
+[![paypal](https://img.shields.io/badge/buy%20me%20a%20coffee-paypal-blue)](https://buymeacoffee.aspiesoft.com/from-npm/global-js-functions)
 
 This module adds some extra global functions to node.js and javascript.
 The same file can run both server side and client side.
